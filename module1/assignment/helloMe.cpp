@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    cin.get();
     string userName;
 
     // ask the user for his name
