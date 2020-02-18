@@ -14,5 +14,10 @@ int main()
     mass = 1.989E30;
     cout << "The Sun is " << distance << " meters away.\n";
     cout << "The Sun\'s mass is " << mass << " kilograms.\n";
+
+    double sum = distance + mass;
+
+    cout << "Sum is " << sum << endl;
+
     return 0;
 }
