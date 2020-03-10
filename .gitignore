@@ -1,0 +1,5 @@
+# ignore a file type of .exe
+*.exe
+
+# ignore vscode json directory
+/.vscode
