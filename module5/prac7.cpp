@@ -16,4 +16,10 @@ int main() {
     }
 
     return 0;
-}
+}]
+
+
+int testLoop() {
+    for(int test = 0; test < 10; test++) {
+        cout << "the value for test is: " << test << endl;
+    }
