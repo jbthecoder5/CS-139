@@ -1,6 +1,6 @@
 // Joseph Bourne
-/* This program will receive input from users about the amount of coins they have.
-    Then it will find how many dimes, quarters, pennies, or nickels they have.
+/* This program will find how many rooms on are each hotel floor, and calculate
+   how many are occupied and unoccupied.
 */
 #include <iostream>
 using namespace std;
@@ -11,20 +11,39 @@ int main() {
     int floors;
     int rooms;
     int counter = 0;
+    int occupied;
+    int unoccupied;
+    int availRoom;
 
     cout << "How many floors does the hotel have? ";
     cin >> floors;
 
     for(int i = 0; i < floors; i++) {
 
-            cout << "How many rooms does this floor have? ";
+            cout << "How many rooms does this floor have?\n";
             cin >> rooms;
+
+            cout << "How many not occupied?\n";
+            cin >> unoccupied;
+
             if (rooms < 1) {
                 cout << "Please enter how many rooms this floor has, must be greater than 1 ";
                 cin >> rooms;
+
             }
-            counter += 1;
-            cout << "Floor " << counter << " has " << rooms << " rooms.\n";
+
+            else if (unoccupied < rooms)
+            {
+                availRoom = rooms - unoccupied;
+                int perc = rooms % availRoom; // perentage of rooms occupied
+
+                cout << "The available amount of rooms for floor " << 
+                floors << ", is: " << availRoom << endl;
+                cout << "Which is " << perc << "%." << endl;
+
+
+            }
+ 
     }
     
 
